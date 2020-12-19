@@ -8,11 +8,12 @@ import reducer from '../reducers'
 
 const App = () => {
   const inisialState = {
-    events:[]
+    events: [],
+    operationLogs: []
   }
   const [state, dispatch] = useReducer(reducer, inisialState)
   return (
-    <AppContext.Provider value={{state,dispatch}}>
+    <AppContext.Provider value={{ state, dispatch }}>
       <div className='container-fluid'>
         <EventForm />
         <Events />
