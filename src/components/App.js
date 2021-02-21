@@ -5,7 +5,7 @@ import Events from './Events'
 import PracticeState from './PracticeState'
 import OperationLogs from './OperationLogs'
 import AppContext from "../contexts/AppContext";
-
+import PracticeState2 from "./PracticeState2"
 import reducer from '../reducers'
 
 const App = () => {
@@ -16,8 +16,8 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, inisialState)
   return (
     <>
-      <PracticeState>
-      </PracticeState>
+      <PracticeState2 />
+      <PracticeState />
       <AppContext.Provider value={{ state, dispatch }}>
         <div className='container-fluid'>
           <EventForm />
